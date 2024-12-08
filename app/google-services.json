@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "864613301148",
+    "project_id": "community-resource-locator-ind",
+    "storage_bucket": "community-resource-locator-ind.appspot.com",
+    "firebase_url": "https://community-resource-locator-ind-default-rtdb.asia-southeast1.firebasedatabase.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864613301148:android:eb3f6f09af309b077da659",
+        "android_client_info": {
+          "package_name": "com.abhik.community_resource_locator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Ag5zNDmrMG9fvxFUaboOMvIA22nEA2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

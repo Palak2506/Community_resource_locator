@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Community_resource_locator</string>
+    <string name="forgotpass"><u>Forgot Password?</u></string>
+    <string name="register"><u>Don\'t have an account? sign up now</u></string>
+
+
+    <string name="open">Open Drawer</string>
+    <string name="close">Close Drawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>
