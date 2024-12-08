@@ -3,6 +3,7 @@ package com.abhik.community_resource_locator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -89,18 +90,45 @@ public class user_login extends AppCompatActivity {
 //        });
 //    }
 
+//    private void validateUser(String email, String password) {
+//        // Replace "." with "_" to match the database key
+//        databaseReference.child(email.replace(".", "_")).addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                if (dataSnapshot.exists()) {
+//                    String storedPassword = dataSnapshot.child("Password").getValue(String.class);
+//                    if (storedPassword != null && storedPassword.equals(password)) {
+//                        Toast.makeText(user_login.this, "Login successful!", Toast.LENGTH_SHORT).show();
+//                        // Navigate to the next activity
+//                        Intent intent= new Intent(user_login.this,user_main.class);
+//                        startActivity(intent);
+//                        finish();
+//                    } else {
+//                        Toast.makeText(user_login.this, "Invalid password!", Toast.LENGTH_SHORT).show();
+//                    }
+//                } else {
+//                    Toast.makeText(user_login.this, "User not found. Please register first.", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+
     private void validateUser(String email, String password) {
-        // Replace "." with "_" to match the database key
-        databaseReference.child(email.replace(".", "_")).addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child(email.replace(".","_")).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     String storedPassword = dataSnapshot.child("Password").getValue(String.class);
                     if (storedPassword != null && storedPassword.equals(password)) {
+                        // Save login state in SharedPreferences
+                        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putBoolean("isLoggedIn", true);
+                        editor.putString("email", email); // Store the email
+                        editor.apply();
+
                         Toast.makeText(user_login.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                        // Navigate to the next activity
-                        Intent intent= new Intent(user_login.this,user_main.class);
+                        Intent intent = new Intent(user_login.this, user_main.class);
                         startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(user_login.this, "Invalid password!", Toast.LENGTH_SHORT).show();
                     }

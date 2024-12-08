@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".user_register"
-    android:background="@color/red">
+    tools:context=".admin_register"
+    android:background="@drawable/bg2_img">
 
 
     <ImageView
@@ -20,7 +20,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register Yourself"
-        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="25sp"
         android:layout_toRightOf="@id/icon_back"

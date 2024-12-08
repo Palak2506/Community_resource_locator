@@ -7,26 +7,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".user_main">
 
-    <!-- Main Content -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/Blue1"
+            android:background="#00b0ff"
             android:elevation="4dp"
             app:title="Community Resource Locator"
             app:titleTextColor="@android:color/white" />
 
-        <!-- Content Cards -->
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/toolbar"
+            android:layout_marginTop="-4dp"
+            android:background="@drawable/gradient_bg"
             android:padding="16dp">
 
             <LinearLayout
@@ -34,13 +34,35 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Card: Ambulance Services -->
+<!--                <com.adityathakker.typingview.TypingTextView-->
+<!--                    android:id="@+id/animatedTextView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    tools:text="This text will animate letter by letter" />-->
+
+
+                <TextView
+                    android:id="@+id/animatedTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="20dp"
+                    android:textStyle="italic"
+                    android:layout_marginTop="10dp"
+                    />
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    app:cardElevation="4dp"
-                    app:cardCornerRadius="8dp">
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -49,26 +71,120 @@
 
                         <ImageView
                             android:id="@+id/iconAmbulance"
-                            android:layout_width="50dp"
+                            android:layout_width="70dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/admin_icon"
-                            android:contentDescription="Ambulance Icon" />
+                            android:contentDescription="Ambulance Icon"
+                            android:src="@drawable/ambulance_img" />
 
                         <TextView
                             android:id="@+id/txtAmbulance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/iconAmbulance"
                             android:layout_marginStart="16dp"
+                            android:layout_toEndOf="@id/iconAmbulance"
                             android:text="Ambulance Services"
                             android:textSize="18sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Add more cards as needed -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/iconfire"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/fire_icon" />
+
+                        <TextView
+                            android:id="@+id/txtfire"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_toEndOf="@id/iconfire"
+                            android:text="Fire Services"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/healthcampicon"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/health_camp_icon" />
+
+                        <TextView
+                            android:id="@+id/txthealth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_toEndOf="@id/healthcampicon"
+                            android:text="Health Camps"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/foodsheltericon"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/food_shelters_icon" />
+
+                        <TextView
+                            android:id="@+id/txtfoodshelter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_toEndOf="@id/foodsheltericon"
+                            android:text="Food Shelters"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
+
         </ScrollView>
+
     </RelativeLayout>
 
     <!-- Navigation Drawer -->
