@@ -9,4 +9,6 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="ola_map_api_key">cY6MRtKtkA0Nu057fclSazPt6loiUFZLwMNS6F7h</string>
 </resources>

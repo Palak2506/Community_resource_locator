@@ -25,7 +25,6 @@ public class user_register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_register);
 
-        // Initialize views
         EditText name = findViewById(R.id.etname);
         EditText email = findViewById(R.id.etmail);
         EditText mobileNumber = findViewById(R.id.etmobnum);
@@ -47,7 +46,6 @@ public class user_register extends AppCompatActivity {
             }
         });
 
-        // Set onClickListener for the register button
         registerButton.setOnClickListener(v -> {
             String userName = name.getText().toString().trim();
             String userEmail = email.getText().toString().trim();
@@ -56,7 +54,7 @@ public class user_register extends AppCompatActivity {
             String userPassword = password.getText().toString().trim();
             String userConfirmPassword = confirmPassword.getText().toString().trim();
 
-            // Validate inputs
+
             if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(userEmail) ||
                     TextUtils.isEmpty(userMobile) || TextUtils.isEmpty(userAddress) ||
                     TextUtils.isEmpty(userPassword) || TextUtils.isEmpty(userConfirmPassword)) {
@@ -79,13 +77,12 @@ public class user_register extends AppCompatActivity {
                 return;
             }
 
-            // Create a HashMap to store user data
             Map<String, String> userData = new HashMap<>();
             userData.put("Name", userName);
             userData.put("Email", userEmail);
             userData.put("Mobile", userMobile);
             userData.put("Address", userAddress);
-            userData.put("Password", userPassword); // Consider hashing this before saving
+            userData.put("Password", userPassword); 
 
             // Save user data in Firebase
             usersRef.child(userEmail.replace(".", "_")).setValue(userData)

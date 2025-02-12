@@ -46,6 +46,14 @@ dependencies {
     implementation ("com.google.firebase:firebase-database:21.0.0")
     implementation ("com.google.firebase:firebase-auth:23.1.0")
 
+    //OlaMap SDK
+    implementation(files("libs/OlaMapSdk-1.0.0.aar"))
+
+    //Maplibre
+    implementation ("org.maplibre.gl:android-sdk:10.0.2")
+    implementation ("org.maplibre.gl:android-plugin-annotation-v9:1.0.0")
+    implementation ("org.maplibre.gl:android-plugin-markerview-v9:1.0.0")
+
 //    implementation ("com.github.adityathakker:typingview:1.1")
 
 

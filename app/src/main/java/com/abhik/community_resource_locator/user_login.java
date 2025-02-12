@@ -118,11 +118,11 @@ public class user_login extends AppCompatActivity {
                 if (dataSnapshot.exists()) {
                     String storedPassword = dataSnapshot.child("Password").getValue(String.class);
                     if (storedPassword != null && storedPassword.equals(password)) {
-                        // Save login state in SharedPreferences
+
                         SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putBoolean("isLoggedIn", true);
-                        editor.putString("email", email); // Store the email
+                        editor.putString("email", email);
                         editor.apply();
 
                         Toast.makeText(user_login.this, "Login successful!", Toast.LENGTH_SHORT).show();

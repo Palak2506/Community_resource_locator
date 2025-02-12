@@ -349,6 +349,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
@@ -366,6 +367,8 @@ public class user_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_main);
+
+        CardView ambulance= findViewById(R.id.ambulancecard);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -385,20 +388,18 @@ public class user_main extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        // Load user email from SharedPreferences
+
         SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
         userEmail = sharedPreferences.getString("email", null);
 
         if (!isLoggedIn || userEmail == null) {
-            // Redirect to login if not logged in
             Intent loginIntent = new Intent(user_main.this, user_login.class);
             startActivity(loginIntent);
             finish();
-            return; // Prevent further execution
+            return;
         }
 
-        // Set Navigation Item Click Listeners
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_my_account) {
@@ -418,6 +419,14 @@ public class user_main extends AppCompatActivity {
                 finish();
             }
             return true;
+        });
+
+        ambulance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(user_main.this, AmbulanceView.class);
+                startActivity(intent);
+            }
         });
 
         // Start the typing animation for the TextView
