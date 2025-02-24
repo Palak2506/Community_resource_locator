@@ -34,18 +34,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-<!--                <com.adityathakker.typingview.TypingTextView-->
-<!--                    android:id="@+id/animatedTextView"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:textSize="18sp"-->
-<!--                    android:textColor="#000"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:padding="16dp"-->
-<!--                    android:layout_marginTop="20dp"-->
-<!--                    tools:text="This text will animate letter by letter" />-->
-
-
                 <TextView
                     android:id="@+id/animatedTextView"
                     android:layout_width="wrap_content"
