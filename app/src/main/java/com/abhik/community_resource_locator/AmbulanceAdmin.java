@@ -112,7 +112,7 @@ public class AmbulanceAdmin extends AppCompatActivity {
             return;
         }
 
-        DatabaseReference userRef = databaseReference.child(name);
+        DatabaseReference userRef = databaseReference.child("AmbulanceServices").child(name);
 
         HashMap<String, Object> dataMap = new HashMap<>();
         dataMap.put("address", address);

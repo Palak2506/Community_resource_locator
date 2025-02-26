@@ -50,7 +50,7 @@ public class On_AmbulanceAdmin extends AppCompatActivity {
                     resultIntent.putExtra("latitude", latLng.getLatitude());
                     resultIntent.putExtra("longitude", latLng.getLongitude());
                     setResult(RESULT_OK, resultIntent);
-                    finish(); // Close this activity and return to AmbulanceAdmin
+                    finish();
                 });
             }
 
