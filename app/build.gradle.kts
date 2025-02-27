@@ -61,6 +61,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
 
+    implementation ("com.airbnb.android:lottie:6.1.0")
+
 
 //    implementation ("com.github.adityathakker:typingview:1.1")
 

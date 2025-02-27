@@ -19,7 +19,7 @@ public class admin_main extends AppCompatActivity {
         setContentView(R.layout.admin_main);
 
         TextView animatedTextView = findViewById(R.id.animatedTextView);
-        String textToAnimate = "What are you looking for ??";
+        String textToAnimate = "What Services are you offering ??";
         animateText(animatedTextView, textToAnimate, 65);
 
 
