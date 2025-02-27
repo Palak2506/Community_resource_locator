@@ -48,7 +48,11 @@ public class AmbulanceAdmin extends AppCompatActivity {
             startActivityForResult(intent, LOCATION_REQUEST_CODE);
         });
 
-        btnSave.setOnClickListener(v -> saveDataToFirebase());
+        //btnSave.setOnClickListener(v -> saveDataToFirebase());
+
+        btnSave.setOnClickListener(v -> {
+            saveDataToFirebase();
+        });
     }
 
     // Handle result from On_AmbulanceAdmin
@@ -115,6 +119,7 @@ public class AmbulanceAdmin extends AppCompatActivity {
         DatabaseReference userRef = databaseReference.child("AmbulanceServices").child(name);
 
         HashMap<String, Object> dataMap = new HashMap<>();
+        dataMap.put("name",name);
         dataMap.put("address", address);
         dataMap.put("ambulanceCount", ambulanceCount);
         dataMap.put("email", email);
@@ -128,9 +133,19 @@ public class AmbulanceAdmin extends AppCompatActivity {
             locationMap.put("latitude", latitude);
             locationMap.put("longitude", longitude);
 
-            userRef.child("location").setValue(locationMap).addOnSuccessListener(aVoid1 ->
-                    Toast.makeText(AmbulanceAdmin.this, "Data saved successfully!", Toast.LENGTH_SHORT).show()
-            ).addOnFailureListener(e ->
+//            userRef.child("location").setValue(locationMap).addOnSuccessListener(aVoid1 ->
+//                    Toast.makeText(AmbulanceAdmin.this, "Data saved successfully!", Toast.LENGTH_SHORT).show()
+//            ).addOnFailureListener(e ->
+//                    Toast.makeText(AmbulanceAdmin.this, "Failed to save location", Toast.LENGTH_SHORT).show()
+//            );
+//        }).addOnFailureListener(e ->
+//                Toast.makeText(AmbulanceAdmin.this, "Failed to save data", Toast.LENGTH_SHORT).show()
+//        );
+
+            userRef.child("location").setValue(locationMap).addOnSuccessListener(aVoid1 -> {
+                Toast.makeText(AmbulanceAdmin.this, "Data saved successfully!", Toast.LENGTH_SHORT).show();
+                finish(); // Return to the previous activity
+            }).addOnFailureListener(e ->
                     Toast.makeText(AmbulanceAdmin.this, "Failed to save location", Toast.LENGTH_SHORT).show()
             );
         }).addOnFailureListener(e ->

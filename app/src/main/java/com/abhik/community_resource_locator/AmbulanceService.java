@@ -2,12 +2,13 @@ package com.abhik.community_resource_locator;
 
 public class AmbulanceService {
 
-    private String address, ambulanceCount, email, phone, serviceHours;
+    private String name,address, ambulanceCount, email, phone, serviceHours;
     private Location location;  // Nested object
 
     public AmbulanceService() {}  // Empty constructor for Firebase
 
-    public AmbulanceService(String address, String ambulanceCount, String email, Location location, String phone, String serviceHours) {
+    public AmbulanceService(String name,String address, String ambulanceCount, String email, Location location, String phone, String serviceHours) {
+        this.name= name;
         this.address = address;
         this.ambulanceCount = ambulanceCount;
         this.email = email;
@@ -16,6 +17,7 @@ public class AmbulanceService {
         this.serviceHours = serviceHours;
     }
 
+    public String getName() { return name; }
     public String getAddress() { return address; }
     public String getAmbulanceCount() { return ambulanceCount; }
     public String getEmail() { return email; }
