@@ -35,6 +35,10 @@ public class user_main extends AppCompatActivity {
         setContentView(R.layout.user_main);
 
         CardView ambulance= findViewById(R.id.ambulancecard);
+        CardView fireservice= findViewById(R.id.firecard);
+        CardView healthservice= findViewById(R.id.healthcard);
+        CardView Foodshelter= findViewById(R.id.foodcard);
+
         loadingAnimation = findViewById(R.id.loadingAnimation);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -92,7 +96,29 @@ public class user_main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                startActivity(new Intent(user_main.this, AmbulanceView.class));
+            }
+        });
 
+        fireservice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(user_main.this, FireServiceview.class));
+            }
+        });
+
+        healthservice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(user_main.this, AmbulanceView.class));
+            }
+        });
+
+        Foodshelter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
                 startActivity(new Intent(user_main.this, AmbulanceView.class));
             }

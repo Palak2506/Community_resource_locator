@@ -20,8 +20,18 @@
         android:theme="@style/Theme.Community_resource_locator"
         tools:targetApi="34">
         <activity
-            android:name=".FireServiceview"
+            android:name=".On_FireServiceView"
             android:exported="false" />
+        <activity
+            android:name=".On_FireService_admin"
+            android:exported="false" />
+        <activity
+            android:name=".FireService_admin"
+            android:exported="false" />
+        <activity
+            android:name=".FireServiceview"
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".On_AmbulanceView"
             android:exported="false" />

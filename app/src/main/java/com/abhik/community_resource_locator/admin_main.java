@@ -24,11 +24,38 @@ public class admin_main extends AppCompatActivity {
 
 
         CardView ambulance= findViewById(R.id.ambulancecard);
+        CardView fireservice= findViewById(R.id.firecard);
+        CardView healthcamp= findViewById(R.id.healthcard);
+        CardView foodshelter= findViewById(R.id.foodcard);
 
         ambulance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(admin_main.this,AmbulanceAdmin.class);
+                startActivity(intent);
+            }
+        });
+
+        fireservice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(admin_main.this,FireService_admin.class);
+                startActivity(intent);
+            }
+        });
+
+        healthcamp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(admin_main.this,FireService_admin.class);
+                startActivity(intent);
+            }
+        });
+
+        foodshelter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(admin_main.this,FireService_admin.class);
                 startActivity(intent);
             }
         });
