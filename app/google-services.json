@@ -1,9 +1,9 @@
 {
   "project_info": {
     "project_number": "864613301148",
+    "firebase_url": "https://community-resource-locator-ind-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "community-resource-locator-ind",
-    "storage_bucket": "community-resource-locator-ind.appspot.com",
-    "firebase_url": "https://community-resource-locator-ind-default-rtdb.asia-southeast1.firebasedatabase.app"
+    "storage_bucket": "community-resource-locator-ind.firebasestorage.app"
   },
   "client": [
     {
