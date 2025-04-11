@@ -47,7 +47,7 @@ public class admin_main extends AppCompatActivity {
         healthcamp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(admin_main.this,FireService_admin.class);
+                Intent intent= new Intent(admin_main.this,HealthAdmin.class);
                 startActivity(intent);
             }
         });

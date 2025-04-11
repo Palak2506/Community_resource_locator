@@ -9,8 +9,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
-
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +22,19 @@
         android:theme="@style/Theme.Community_resource_locator"
         tools:targetApi="34">
         <activity
+            android:name=".On_healthservice_view"
+            android:exported="false" />
+        <activity
+            android:name=".HealthServiceView"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".On_health_admin"
+            android:exported="false" />
+        <activity
+            android:name=".HealthAdmin"
+            android:exported="false" />
+        <activity
             android:name=".On_FireServiceView"
             android:exported="false" />
         <activity
@@ -34,7 +46,7 @@
         <activity
             android:name=".FireServiceview"
             android:exported="false"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".On_AmbulanceView"
             android:exported="false" />

@@ -94,4 +94,7 @@ public class user_register extends AppCompatActivity {
                             Toast.makeText(user_register.this, "Registration failed! " + e.getMessage(), Toast.LENGTH_SHORT).show());
         });
     }
+
+    public static class healthAdapter {
+    }
 }

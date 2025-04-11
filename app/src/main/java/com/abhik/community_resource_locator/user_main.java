@@ -112,7 +112,7 @@ public class user_main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(user_main.this, AmbulanceView.class));
+                startActivity(new Intent(user_main.this, HealthServiceView.class));
             }
         });
 
